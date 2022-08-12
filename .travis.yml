@@ -1,0 +1,18 @@
+language: go
+sudo: false
+
+env:
+  - env=travis
+
+go:
+  - master
+  - "1.14"
+
+install:
+  - go get -u golang.org/x/tools/cmd/cover
+  - go get -u github.com/mattn/goveralls
+
+addons:
+  sonarcloud: true
+  
+script: true  
